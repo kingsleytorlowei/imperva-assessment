@@ -3,6 +3,7 @@ import os
 from flask import Flask, Response
 from dotenv import dotenv_values
 from .views import CustomersAPI, FilmsAPI
+import json
 
 
 def create_app():
