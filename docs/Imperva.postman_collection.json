@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "aa4da2e6-35f3-4e9c-b3d2-245acc759161",
+		"name": "Imperva",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Customers",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/customers?limit=0&offset=0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"customers"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "0"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 17,\n        \"first_name\": \"DONNA\",\n        \"last_name\": \"THOMPSON\"\n    },\n    {\n        \"id\": 26,\n        \"first_name\": \"JESSICA\",\n        \"last_name\": \"HALL\"\n    },\n    {\n        \"id\": 32,\n        \"first_name\": \"AMY\",\n        \"last_name\": \"LOPEZ\"\n    },\n    {\n        \"id\": 37,\n        \"first_name\": \"PAMELA\",\n        \"last_name\": \"BAKER\"\n    },\n    {\n        \"id\": 48,\n        \"first_name\": \"ANN\",\n        \"last_name\": \"EVANS\"\n    },\n    {\n        \"id\": 50,\n        \"first_name\": \"DIANE\",\n        \"last_name\": \"COLLINS\"\n    },\n    {\n        \"id\": 58,\n        \"first_name\": \"JEAN\",\n        \"last_name\": \"BELL\"\n    },\n    {\n        \"id\": 101,\n        \"first_name\": \"PEGGY\",\n        \"last_name\": \"MYERS\"\n    },\n    {\n        \"id\": 102,\n        \"first_name\": \"CRYSTAL\",\n        \"last_name\": \"FORD\"\n    },\n    {\n        \"id\": 111,\n        \"first_name\": \"CARMEN\",\n        \"last_name\": \"OWENS\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GET Customer Info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "customer_id",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/customers/20/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"customers",
+						"20",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Customer Info",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "customer_id",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/customers/20/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"20",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"address\": \"1688 okara way\",\n    \"city\": \"mardan\",\n    \"country\": \"pakistan\",\n    \"first_name\": \"Sharon\",\n    \"last_name\": \"Robinson\",\n    \"rentals\": [\n        {\n            \"film_title\": \"chocolat harry\",\n            \"rental_duration\": \"6 days\",\n            \"rental_cost\": 2.99\n        },\n        {\n            \"film_title\": \"butterfly chocolat\",\n            \"rental_duration\": \"4 days\",\n            \"rental_cost\": 1.99\n        },\n        {\n            \"film_title\": \"minority kiss\",\n            \"rental_duration\": \"7 days\",\n            \"rental_cost\": 3.99\n        },\n        {\n            \"film_title\": \"wyoming storm\",\n            \"rental_duration\": \"3 days\",\n            \"rental_cost\": 4.99\n        },\n        {\n            \"film_title\": \"interview liaisons\",\n            \"rental_duration\": \"6 days\",\n            \"rental_cost\": 6.99\n        },\n        {\n            \"film_title\": \"mine titans\",\n            \"rental_duration\": \"2 days\",\n            \"rental_cost\": 4.99\n        },\n        {\n            \"film_title\": \"egg igby\",\n            \"rental_duration\": \"6 days\",\n            \"rental_cost\": 5.99\n        },\n        {\n            \"film_title\": \"uptown young\",\n            \"rental_duration\": \"3 days\",\n            \"rental_cost\": 2.99\n        },\n        {\n            \"film_title\": \"holes brannigan\",\n            \"rental_duration\": \"3 days\",\n            \"rental_cost\": 4.99\n        },\n        {\n            \"film_title\": \"wagon jaws\",\n            \"rental_duration\": \"7 days\",\n            \"rental_cost\": 3.99\n        },\n        {\n            \"film_title\": \"roxanne rebel\",\n            \"rental_duration\": \"6 days\",\n            \"rental_cost\": 1.99\n        },\n        {\n            \"film_title\": \"jungle closer\",\n            \"rental_duration\": \"2 days\",\n            \"rental_cost\": 0.99\n        },\n        {\n            \"film_title\": \"flash wars\",\n            \"rental_duration\": \"2 days\",\n            \"rental_cost\": 4.99\n        },\n        {\n            \"film_title\": \"west lion\",\n            \"rental_duration\": \"3 days\",\n            \"rental_cost\": 4.99\n        },\n        {\n            \"film_title\": \"fireball philadelphia\",\n            \"rental_duration\": \"5 days\",\n            \"rental_cost\": 1.99\n        },\n        {\n            \"film_title\": \"deceiver betrayed\",\n            \"rental_duration\": \"3 days\",\n            \"rental_cost\": 0.99\n        },\n        {\n            \"film_title\": \"million ace\",\n            \"rental_duration\": \"6 days\",\n            \"rental_cost\": 6.99\n        },\n        {\n            \"film_title\": \"voice peach\",\n            \"rental_duration\": \"3 days\",\n            \"rental_cost\": 0.99\n        },\n        {\n            \"film_title\": \"quest mussolini\",\n            \"rental_duration\": \"7 days\",\n            \"rental_cost\": 4.99\n        },\n        {\n            \"film_title\": \"hyde doctor\",\n            \"rental_duration\": \"6 days\",\n            \"rental_cost\": 3.99\n        },\n        {\n            \"film_title\": \"bear graceland\",\n            \"rental_duration\": \"4 days\",\n            \"rental_cost\": 2.99\n        },\n        {\n            \"film_title\": \"smoochy control\",\n            \"rental_duration\": \"9 days\",\n            \"rental_cost\": 2.99\n        },\n        {\n            \"film_title\": \"hurricane affair\",\n            \"rental_duration\": \"5 days\",\n            \"rental_cost\": 2.99\n        },\n        {\n            \"film_title\": \"novocaine flight\",\n            \"rental_duration\": \"8 days\",\n            \"rental_cost\": 4.99\n        },\n        {\n            \"film_title\": \"doors president\",\n            \"rental_duration\": \"5 days\",\n            \"rental_cost\": 7.99\n        },\n        {\n            \"film_title\": \"moon bunch\",\n            \"rental_duration\": \"0 days\",\n            \"rental_cost\": 0.99\n        },\n        {\n            \"film_title\": \"robbers joon\",\n            \"rental_duration\": \"1 days\",\n            \"rental_cost\": 2.99\n        },\n        {\n            \"film_title\": \"star operation\",\n            \"rental_duration\": \"5 days\",\n            \"rental_cost\": 2.99\n        },\n        {\n            \"film_title\": \"working microcosmos\",\n            \"rental_duration\": \"5 days\",\n            \"rental_cost\": 6.99\n        },\n        {\n            \"film_title\": \"operation operation\",\n            \"rental_duration\": \"5 days\",\n            \"rental_cost\": 2.99\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "GET Films",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/films/?limit&offset",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"films",
+						""
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": null
+						},
+						{
+							"key": "offset",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Films",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/films/?limit=10&offset=0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"films",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 19,\n        \"title\": \"amadeus holy\",\n        \"category\": \"amadeus holy\",\n        \"description\": \"a emotional display of a pioneer and a technical writer who must battle a man in a baloon\",\n        \"rating\": \"pg\",\n        \"rental_duration\": \"6\"\n    },\n    {\n        \"id\": 9,\n        \"title\": \"alabama devil\",\n        \"category\": \"alabama devil\",\n        \"description\": \"a thoughtful panorama of a database administrator and a mad scientist who must outgun a mad scientist in a jet boat\",\n        \"rating\": \"pg-13\",\n        \"rental_duration\": \"3\"\n    },\n    {\n        \"id\": 54,\n        \"title\": \"banger pinocchio\",\n        \"category\": \"banger pinocchio\",\n        \"description\": \"a awe-inspiring drama of a car and a pastry chef who must chase a crocodile in the first manned space station\",\n        \"rating\": \"r\",\n        \"rental_duration\": \"5\"\n    },\n    {\n        \"id\": 91,\n        \"title\": \"bound cheaper\",\n        \"category\": \"bound cheaper\",\n        \"description\": \"a thrilling panorama of a database administrator and a astronaut who must challenge a lumberjack in a baloon\",\n        \"rating\": \"pg\",\n        \"rental_duration\": \"5\"\n    },\n    {\n        \"id\": 95,\n        \"title\": \"breakfast goldfinger\",\n        \"category\": \"breakfast goldfinger\",\n        \"description\": \"a beautiful reflection of a student and a student who must fight a moose in berlin\",\n        \"rating\": \"g\",\n        \"rental_duration\": \"5\"\n    },\n    {\n        \"id\": 152,\n        \"title\": \"circus youth\",\n        \"category\": \"circus youth\",\n        \"description\": \"a thoughtful drama of a pastry chef and a dentist who must pursue a girl in a baloon\",\n        \"rating\": \"pg-13\",\n        \"rental_duration\": \"5\"\n    },\n    {\n        \"id\": 155,\n        \"title\": \"cleopatra devil\",\n        \"category\": \"cleopatra devil\",\n        \"description\": \"a fanciful documentary of a crocodile and a technical writer who must fight a a shark in a baloon\",\n        \"rating\": \"pg-13\",\n        \"rental_duration\": \"6\"\n    },\n    {\n        \"id\": 197,\n        \"title\": \"crusade honey\",\n        \"category\": \"crusade honey\",\n        \"description\": \"a fast-paced reflection of a explorer and a butler who must battle a madman in an abandoned amusement park\",\n        \"rating\": \"r\",\n        \"rental_duration\": \"4\"\n    },\n    {\n        \"id\": 202,\n        \"title\": \"daddy pittsburgh\",\n        \"category\": \"daddy pittsburgh\",\n        \"description\": \"a epic story of a a shark and a student who must confront a explorer in the gulf of mexico\",\n        \"rating\": \"g\",\n        \"rental_duration\": \"5\"\n    },\n    {\n        \"id\": 215,\n        \"title\": \"dawn pond\",\n        \"category\": \"dawn pond\",\n        \"description\": \"a thoughtful documentary of a dentist and a forensic psychologist who must defeat a waitress in berlin\",\n        \"rating\": \"pg\",\n        \"rental_duration\": \"4\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GET Film Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/films/17/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"films",
+						"17",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET Film Info",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/films/17/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"films",
+								"17",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"id\": 17,\n    \"title\": \"alone trip\",\n    \"category\": \"alone trip\",\n    \"description\": \"a fast-paced character study of a composer and a dog who must outgun a boat in an abandoned fun house\",\n    \"rating\": \"r\",\n    \"rental_duration\": \"3\",\n    \"film_length\": \"82\",\n    \"replacement_cost\": \"14.99\",\n    \"special_features\": \"Trailers,Behind the Scenes\",\n    \"customers\": [\n        {\n            \"id\": 36,\n            \"name\": \"Kathleen Adams\"\n        },\n        {\n            \"id\": 108,\n            \"name\": \"Tracy Cole\"\n        },\n        {\n            \"id\": 146,\n            \"name\": \"Jamie Rice\"\n        },\n        {\n            \"id\": 164,\n            \"name\": \"Joann Gardner\"\n        },\n        {\n            \"id\": 165,\n            \"name\": \"Lorraine Stephens\"\n        },\n        {\n            \"id\": 87,\n            \"name\": \"Wanda Patterson\"\n        },\n        {\n            \"id\": 30,\n            \"name\": \"Melissa King\"\n        },\n        {\n            \"id\": 386,\n            \"name\": \"Todd Tan\"\n        },\n        {\n            \"id\": 360,\n            \"name\": \"Ralph Madrigal\"\n        },\n        {\n            \"id\": 261,\n            \"name\": \"Deanna Byrd\"\n        },\n        {\n            \"id\": 371,\n            \"name\": \"Billy Poulin\"\n        },\n        {\n            \"id\": 481,\n            \"name\": \"Herman Devore\"\n        },\n        {\n            \"id\": 236,\n            \"name\": \"Marcia Dean\"\n        },\n        {\n            \"id\": 523,\n            \"name\": \"Harvey Guajardo\"\n        },\n        {\n            \"id\": 535,\n            \"name\": \"Javier Elrod\"\n        },\n        {\n            \"id\": 359,\n            \"name\": \"Willie Markham\"\n        },\n        {\n            \"id\": 335,\n            \"name\": \"Gregory Mauldin\"\n        },\n        {\n            \"id\": 428,\n            \"name\": \"Herbert Kruger\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
