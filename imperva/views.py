@@ -8,11 +8,13 @@ from bson.objectid import ObjectId
 
 from .db import DBClient
 from .utils import create_customer_data, create_film_data
+from .exceptions import ImpervaNotFound, ImpervaBadRequest, http_error
 
 class CustomersAPI(MethodView, DBClient):
     def __init__(self):
         self.db_client = self.db_client().imperva_db
 
+    @http_error
     def get(self, customer_id):
         cursor = self.db_client['customers']
         if customer_id is None:
@@ -22,6 +24,7 @@ class CustomersAPI(MethodView, DBClient):
             offset = request.args.get('offset')
             if offset is None or offset == '':
                 offset = 0
+
             customers_placeholder = []
             all_customers = cursor.find({}).skip(int(offset)).limit(int(limit))
             for customer in all_customers:
@@ -36,7 +39,7 @@ class CustomersAPI(MethodView, DBClient):
         else:
             customer_data = cursor.find_one({'_id':customer_id})
             if customer_data == None:
-                raise Exception('customer with id not found')
+                raise ImpervaNotFound(f'customer with id: {customer_id} not found')
             cleaned_customer_data = create_customer_data(customer_data)
             return Response(response=json.dumps(cleaned_customer_data),
                     status=200,
@@ -47,6 +50,7 @@ class FilmsAPI(MethodView, DBClient):
     def __init__(self):
         self.db_client = self.db_client().imperva_db
 
+    @http_error
     def get(self, film_id):
         film_cursor = self.db_client['films']
         if film_id is None:
@@ -68,7 +72,7 @@ class FilmsAPI(MethodView, DBClient):
             customer_cursor = self.db_client['customers']
             film_data = film_cursor.find_one({'_id':film_id})
             if film_data == None:
-                raise Exception('film with id not found')
+                raise ImpervaNotFound(f'film with id: {film_id} not found')
 
             customer_list = []
             all_customers = customer_cursor.find({})
