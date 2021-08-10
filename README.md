@@ -18,7 +18,7 @@ source env/bin/activate
 ```
 touch .env
 ```
-Enviroment variables are included in the email to the recruiter. 
+Enviroment variables are included in the email to the recruiter. Note: Link to database variable would expire in a week.
 
 ## Install dependencies
 ```
